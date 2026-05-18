@@ -1,0 +1,85 @@
+{
+  "general": {
+    "go_back": "Go Back",
+    "loading": "Loading..."
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System",
+    "toggle": "Toggle theme"
+  },
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "favorites": "Favorites",
+    "products": "Products"
+  },
+  "footer": {
+    "developed_by_author": "by {author}",
+    "change_language": "Change language"
+  },
+  "search": {
+    "placeholder": "Search fabrics, Ankara, lace...",
+    "placeholder_in_category": "Search in {category}...",
+    "no_results_for_query": "No results for {query}",
+    "no_results_suggestion": "Try checking your spelling or searching with a different fabric name or keyword.",
+    "view_all_results": "View all results",
+    "new_products": "New Arrivals",
+    "no_products_matching": " No fabrics matching",
+    "no_products_found_matching": "No fabrics found matching",
+    "no_products_found": "No fabrics found",
+    "use_search_bar_above": "You can use the search bar above to try searching with different terms.",
+    "in": "in",
+    "reset_search": "Reset Search"
+  },
+  "filter": {
+    "all_categories": "All Categories",
+    "newest": "Newest",
+    "price_low_high": "Price: Low to High",
+    "price_high_low": "Price: High to Low"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "form": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "city": "City",
+      "address": "Address"
+    },
+    "pay": {
+      "description": "Paying a total of {total} for {items} items",
+      "btn": "Pay {total}",
+      "secure": "your payment is secured by {method}",
+      "success": "Payment successful!",
+      "processed": "Thank you for your purchase! Your order is being processed.",
+      "total": "Total",
+      "order_number": "Order Number",
+      "date": "Date",
+      "payment_method": "Payment Method"
+    }
+  },
+  "product": {
+    "originally": "Originally",
+    "size": "Yards / Size",
+    "quantity": "Quantity",
+    "sku": "fabric code",
+    "vat_included": "VAT inclusive",
+    "featured_information": "Fabric Details",
+    "free_return": "Returns accepted within 7 days. Click for details",
+    "information": "Information",
+    "shop_similar": "Shop similar fabrics"
+  },
+  "cart": {
+    "empty": "Your cart is empty",
+    "notting_added": "You haven't added any items to your cart yet.",
+    "add_to_cart": "Add to cart",
+    "added_to_cart": "Added to cart"
+  },
+  "favorites": {
+    "nothing_to_show_yet": "Nothing saved yet!",
+    "wishlist_lives_here": "Fabrics you save will appear here. Tap the heart on any fabric to add it to your wishlist."
+  }
+}
