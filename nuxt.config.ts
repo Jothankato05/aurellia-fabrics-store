@@ -40,15 +40,32 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    // Pre-render at build time — served as static HTML from Cloudflare CDN, zero backend calls
     "/": { prerender: true },
-    "/categories": { swr: 3600 },
-    "/favorites": { swr: 600 },
+    "/categories": { prerender: true },
+
+    // Product pages: serve stale for 24h, revalidate in background
+    "/product/**": { swr: 86400 },
+
+    "/favorites": { ssr: false },
+
+    // API: tell Cloudflare's CDN to cache responses at the edge
+    "/api/products": { cache: { maxAge: 3600, staleMaxAge: 86400 } },
+    "/api/categories": { cache: { maxAge: 3600, staleMaxAge: 86400 } },
+    "/api/product": { cache: { maxAge: 3600, staleMaxAge: 86400 } },
+    "/api/search": { cache: { maxAge: 300, staleMaxAge: 3600 } },
+
+    // Immutable JS/CSS assets — browser caches forever
+    "/_nuxt/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
   },
 
   nitro: {
-    // cloudflare_pages preset is for production deployment; use default locally
     preset: process.env.NODE_ENV === "production" ? "cloudflare_pages" : undefined,
-    prerender: { routes: ["/sitemap.xml", "/robots.txt"] },
+    prerender: {
+      routes: ["/sitemap.xml", "/robots.txt"],
+      // Auto-discover and pre-render all product + category pages at build time
+      crawlLinks: true,
+    },
   },
 
   compatibilityDate: "2025-01-01",
