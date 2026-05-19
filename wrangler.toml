@@ -1,6 +1,2 @@
-name = "commerce"
+name = "aurellia-fabrics"
 compatibility_date = "2025-01-01"
-
-[[kv_namespaces]]
-binding = "CACHE"
-id = "4327844b603247c388d716abd2575eb4"

@@ -4,7 +4,7 @@ import pkg from "./package.json";
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
-  modules: ["@vueuse/nuxt", "@nuxt/ui", "@nuxt/image", "notivue/nuxt", "@nuxtjs/i18n", "@nuxthub/core"],
+  modules: ["@vueuse/nuxt", "@nuxt/ui", "@nuxt/image", "notivue/nuxt", "@nuxtjs/i18n"],
 
   i18n: {
     defaultLocale: "en",
@@ -49,14 +49,6 @@ export default defineNuxtConfig({
     // cloudflare_pages preset is for production deployment; use default locally
     preset: process.env.NODE_ENV === "production" ? "cloudflare_pages" : undefined,
     prerender: { routes: ["/sitemap.xml", "/robots.txt"] },
-  },
-
-  hub: {
-    // Cloudflare KV cache is only available when deployed on Cloudflare
-    cache: process.env.NODE_ENV === "production" ? {
-      driver: "cloudflare-kv-binding",
-      binding: "CACHE",
-    } : undefined,
   },
 
   compatibilityDate: "2025-01-01",
